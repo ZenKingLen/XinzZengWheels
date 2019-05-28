@@ -14,6 +14,10 @@
 		7ECDDDF5229D9648007951D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECDDDF3229D9648007951D3 /* LaunchScreen.storyboard */; };
 		7ECDDDF8229D9648007951D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDDF7229D9648007951D3 /* main.m */; };
 		7ECDDE02229D9648007951D3 /* XinzZengWheelsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE01229D9648007951D3 /* XinzZengWheelsTests.m */; };
+		7ECDDE0D229D9A64007951D3 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 7ECDDE0C229D9A64007951D3 /* readme.md */; };
+		7ECDDE14229D9B52007951D3 /* XZhAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE13229D9B52007951D3 /* XZhAES.m */; };
+		7ECDDE1A229D9C2B007951D3 /* NSData+XZhData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE19229D9C2B007951D3 /* NSData+XZhData.m */; };
+		7ECDDE1D229DA0D2007951D3 /* NSString+XZhString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE1C229DA0D2007951D3 /* NSString+XZhString.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,13 @@
 		7ECDDDFD229D9648007951D3 /* XinzZengWheelsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XinzZengWheelsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECDDE01229D9648007951D3 /* XinzZengWheelsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XinzZengWheelsTests.m; sourceTree = "<group>"; };
 		7ECDDE03229D9648007951D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ECDDE0C229D9A64007951D3 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = SOURCE_ROOT; };
+		7ECDDE12229D9B52007951D3 /* XZhAES.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZhAES.h; sourceTree = "<group>"; };
+		7ECDDE13229D9B52007951D3 /* XZhAES.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZhAES.m; sourceTree = "<group>"; };
+		7ECDDE18229D9C2B007951D3 /* NSData+XZhData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+XZhData.h"; sourceTree = "<group>"; };
+		7ECDDE19229D9C2B007951D3 /* NSData+XZhData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+XZhData.m"; sourceTree = "<group>"; };
+		7ECDDE1B229DA0D2007951D3 /* NSString+XZhString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+XZhString.h"; sourceTree = "<group>"; };
+		7ECDDE1C229DA0D2007951D3 /* NSString+XZhString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+XZhString.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +92,8 @@
 		7ECDDDE7229D9646007951D3 /* XinzZengWheels */ = {
 			isa = PBXGroup;
 			children = (
+				7ECDDE15229D9BB3007951D3 /* XZhExtensions */,
+				7ECDDE0E229D9AC4007951D3 /* AES */,
 				7ECDDDE8229D9646007951D3 /* AppDelegate.h */,
 				7ECDDDE9229D9646007951D3 /* AppDelegate.m */,
 				7ECDDDEB229D9646007951D3 /* ViewController.h */,
@@ -90,6 +103,7 @@
 				7ECDDDF3229D9648007951D3 /* LaunchScreen.storyboard */,
 				7ECDDDF6229D9648007951D3 /* Info.plist */,
 				7ECDDDF7229D9648007951D3 /* main.m */,
+				7ECDDE0C229D9A64007951D3 /* readme.md */,
 			);
 			path = XinzZengWheels;
 			sourceTree = "<group>";
@@ -101,6 +115,42 @@
 				7ECDDE03229D9648007951D3 /* Info.plist */,
 			);
 			path = XinzZengWheelsTests;
+			sourceTree = "<group>";
+		};
+		7ECDDE0E229D9AC4007951D3 /* AES */ = {
+			isa = PBXGroup;
+			children = (
+				7ECDDE12229D9B52007951D3 /* XZhAES.h */,
+				7ECDDE13229D9B52007951D3 /* XZhAES.m */,
+			);
+			path = AES;
+			sourceTree = "<group>";
+		};
+		7ECDDE15229D9BB3007951D3 /* XZhExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				7ECDDE16229D9BEC007951D3 /* XZhData */,
+				7ECDDE17229D9BEC007951D3 /* XZhNSString */,
+			);
+			path = XZhExtensions;
+			sourceTree = "<group>";
+		};
+		7ECDDE16229D9BEC007951D3 /* XZhData */ = {
+			isa = PBXGroup;
+			children = (
+				7ECDDE18229D9C2B007951D3 /* NSData+XZhData.h */,
+				7ECDDE19229D9C2B007951D3 /* NSData+XZhData.m */,
+			);
+			path = XZhData;
+			sourceTree = "<group>";
+		};
+		7ECDDE17229D9BEC007951D3 /* XZhNSString */ = {
+			isa = PBXGroup;
+			children = (
+				7ECDDE1B229DA0D2007951D3 /* NSString+XZhString.h */,
+				7ECDDE1C229DA0D2007951D3 /* NSString+XZhString.m */,
+			);
+			path = XZhNSString;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +236,7 @@
 				7ECDDDF5229D9648007951D3 /* LaunchScreen.storyboard in Resources */,
 				7ECDDDF2229D9648007951D3 /* Assets.xcassets in Resources */,
 				7ECDDDF0229D9646007951D3 /* Main.storyboard in Resources */,
+				7ECDDE0D229D9A64007951D3 /* readme.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,9 +254,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECDDE1A229D9C2B007951D3 /* NSData+XZhData.m in Sources */,
 				7ECDDDED229D9646007951D3 /* ViewController.m in Sources */,
 				7ECDDDF8229D9648007951D3 /* main.m in Sources */,
 				7ECDDDEA229D9646007951D3 /* AppDelegate.m in Sources */,
+				7ECDDE14229D9B52007951D3 /* XZhAES.m in Sources */,
+				7ECDDE1D229DA0D2007951D3 /* NSString+XZhString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
