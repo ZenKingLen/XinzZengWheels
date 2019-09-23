@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+typedef enum : NSUInteger {
+    XZhAlertStyleAlert = 0,
+    XZhAlertStyleSheet,
+} XZhAlertStyle;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface XZhAlertSheet : NSObject
+
+@property(nonatomic, assign) XZhAlertStyle style;
+
+
 
 @end
 

@@ -13,6 +13,120 @@
 
 @implementation NSData (XZhData)
 
+@dynamic xzh_stringData;
+@dynamic xzh_aes128Decrypt;
+@dynamic xzh_aes128Encrypt;
+
+
+// MARK:- 链式调用 -
+
+- (NSData *  (^)(NSString * ))xzh_aes128Encrypt {
+    return ^NSData *(NSString *key) {
+        if (!key || [key length]<1) {
+            return nil;
+        }
+        // 填充方式 (自动填充)
+        // 初始向量值 (ecb 无初始向量)
+        // 加密模式 (ECB)
+        // 长度
+        char keyPtr[kCCKeySizeAES128 + 1];
+        bzero(keyPtr, sizeof(keyPtr));
+        [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
+        NSUInteger dataLength = [self length];
+        size_t bufferSize = dataLength + kCCBlockSizeAES128;
+        void *buffer = malloc(bufferSize);
+        size_t numBytesEncrypt = 0;
+        CCCryptorStatus status = CCCrypt(kCCEncrypt,
+                                         kCCAlgorithmAES128,
+                                         kCCOptionECBMode | kCCOptionPKCS7Padding,
+                                         keyPtr,
+                                         kCCBlockSizeAES128,
+                                         NULL,
+                                         [self bytes],
+                                         dataLength,
+                                         buffer,
+                                         bufferSize,
+                                         &numBytesEncrypt);
+        if (status == kCCSuccess) {
+            return  [NSData dataWithBytesNoCopy:buffer length:numBytesEncrypt];
+        }
+        free(buffer);
+        NSLog(@"decrypt fail. status: %d", status);
+        return nil;
+    };
+}
+
+- (NSData * _Nonnull (^)(NSString * _Nonnull))xzh_aes128Decrypt {
+    return ^NSData *(NSString *key) {
+        if (!key || [key length]<1) {
+            return nil;
+        }
+        // 填充方式 (自动填充)
+        // 初始向量值 (ecb 无初始向量)
+        // 加密模式 (ECB)
+        // 长度
+        char keyPtr[kCCKeySizeAES128 + 1];
+        bzero(keyPtr, sizeof(keyPtr));
+        [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
+        NSUInteger dataLength = [self length];
+        size_t bufferSize = dataLength + kCCBlockSizeAES128;
+        void *buffer = malloc(bufferSize);
+        size_t numBytesEncrypt = 0;
+        CCCryptorStatus status = CCCrypt(kCCEncrypt,
+                                         kCCAlgorithmAES128,
+                                         kCCOptionECBMode | kCCOptionPKCS7Padding,
+                                         keyPtr,
+                                         kCCBlockSizeAES128,
+                                         NULL,
+                                         [self bytes],
+                                         dataLength,
+                                         buffer,
+                                         bufferSize,
+                                         &numBytesEncrypt);
+        if (status == kCCSuccess) {
+            return  [NSData dataWithBytesNoCopy:buffer length:numBytesEncrypt];
+        }
+        free(buffer);
+        NSLog(@"decrypt fail. status: %d", status);
+        return nil;
+    };
+}
+
+- (NSData * _Nonnull (^)(NSString * _Nonnull))xzh_stringData {
+    return ^NSData *(NSString *hexString) {
+        if (!hexString || [hexString length] == 0) {
+            return nil;
+        }
+        NSMutableData *hexData = [[NSMutableData alloc] initWithCapacity:8];
+        NSRange range;
+        if ([hexString length] % 2 == 0) {
+            range = NSMakeRange(0, 2);
+        } else {
+            range = NSMakeRange(0, 1);
+        }
+        for (NSInteger i = range.location; i < [hexString length]; i += 2) {
+            unsigned int anInt;
+            NSString *hexCharString = [hexString substringWithRange:range];
+            NSScanner *scanner = [[NSScanner alloc] initWithString:hexCharString];
+            
+            [scanner scanHexInt:&anInt];
+            NSData *entity = [[NSData alloc] initWithBytes:&anInt length:1];
+            [hexData appendData:entity];
+            
+            range.location += range.length;
+            range.length = 2;
+        }
+        //    NSLog(@"hexdata: %@", hexData);
+        return hexData;
+    };
+}
+
+- (void)setXzh_stringData:(NSData * _Nonnull (^)(NSString * _Nonnull))xzh_stringData {}
+- (void)setXzh_aes128Decrypt:(NSData * _Nonnull (^)(NSString * _Nonnull))xzh_aes128Decrypt {}
+- (void)setXzh_aes128Encrypt:(NSData * _Nonnull (^)(NSString * _Nonnull))xzh_aes128Encrypt {}
+
+// MARK:- 方法调用 -
+
 #pragma mark - aes 加密解密 -
 
 /**

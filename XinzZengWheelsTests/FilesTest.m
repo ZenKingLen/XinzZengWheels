@@ -7,6 +7,7 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "XZhFiles.h"
 
 @interface FilesTest : XCTestCase
 
@@ -22,16 +23,45 @@
     // Put teardown code here. This method is called after the invocation of each test method in the class.
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)test_uniformtCaseFiles {
+    NSString *document = [[NSBundle mainBundle] pathForResource:@"jpg_images.bundle" ofType:nil];
+    NSArray *jpgs = XZhFiles.uniformtCaseFiles(document, @"jpg");
+    XCTAssert(jpgs.count == 1, "fail");
+    jpgs = XZhFiles.uniformtCaseFiles(document, @"png");
+    XCTAssert(jpgs.count == 0, "fail");
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)test_uniformtNoCaseFiles {
+    NSString *document = [[NSBundle mainBundle] pathForResource:@"jpg_images.bundle" ofType:nil];
+    NSArray *jpgs = XZhFiles.uniformtNoCaseFiles(document, @"jpg");
+    XCTAssert(jpgs.count == 3, "fail");
+    jpgs = XZhFiles.uniformtNoCaseFiles(document, @"png");
+    XCTAssert(jpgs.count == 0, "fail");
 }
+
+- (void)test_uniformtFiles {
+    NSString *document = [[NSBundle mainBundle] pathForResource:@"jpg_images.bundle" ofType:nil];
+    NSArray *jpgs = XZhFiles.uniformtFiles(document, @"jpg", YES);
+    XCTAssert(jpgs.count == 1, "fail");
+    jpgs = XZhFiles.uniformtFiles(document, @"jpg", NO);
+    XCTAssert(jpgs.count == 3, "fail");
+    jpgs = XZhFiles.uniformtFiles(document, @"png", YES);
+    XCTAssert(jpgs.count == 0, "fail");
+    jpgs = XZhFiles.uniformtFiles(document, @"png", NO);
+    XCTAssert(jpgs.count == 0, "fail");
+}
+
+- (void)test_documentFiles {
+    NSString *document = [[NSBundle mainBundle] pathForResource:@"jpg_images.bundle" ofType:nil];
+    NSArray *jpgs = XZhFiles.documentFiles(document);
+    XCTAssert(jpgs.count == 3, "fail");
+}
+
+//- (void)testPerformanceExample {
+//    // This is an example of a performance test case.
+//    [self measureBlock:^{
+//        // Put the code you want to measure the time of here.
+//    }];
+//}
 
 @end

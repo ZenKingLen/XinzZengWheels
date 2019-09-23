@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIViewController (XZhAlertController)
 
+// 270 - 104
+//- (void)toastTitle:(NSString *)title cancel:(NSString *)cancel;
+
+//- (void)toastTitle:(NSString *)title cancel:(NSString *)cancel;
+
 @end
 
 NS_ASSUME_NONNULL_END
