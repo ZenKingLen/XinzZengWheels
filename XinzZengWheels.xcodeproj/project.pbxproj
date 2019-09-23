@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E16D973231C47050001957F /* XZhAudioRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E16D972231C47050001957F /* XZhAudioRecord.m */; };
+		7E16D976231C488B0001957F /* XZhAudioPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E16D975231C488B0001957F /* XZhAudioPlay.m */; };
+		7E16D97923216F6A0001957F /* XZhAudioConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E16D97823216F6A0001957F /* XZhAudioConfig.m */; };
 		7ECDDDEA229D9646007951D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDDE9229D9646007951D3 /* AppDelegate.m */; };
 		7ECDDDED229D9646007951D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDDEC229D9646007951D3 /* ViewController.m */; };
 		7ECDDDF0229D9646007951D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECDDDEE229D9646007951D3 /* Main.storyboard */; };
@@ -18,6 +21,16 @@
 		7ECDDE14229D9B52007951D3 /* XZhAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE13229D9B52007951D3 /* XZhAES.m */; };
 		7ECDDE1A229D9C2B007951D3 /* NSData+XZhData.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE19229D9C2B007951D3 /* NSData+XZhData.m */; };
 		7ECDDE1D229DA0D2007951D3 /* NSString+XZhString.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE1C229DA0D2007951D3 /* NSString+XZhString.m */; };
+		7ECDDE5222C8FA3B007951D3 /* UIView+XZhEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE5122C8FA3B007951D3 /* UIView+XZhEdge.m */; };
+		7ECDDE5622C8FEA3007951D3 /* UIViewController+XZhAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE5522C8FEA3007951D3 /* UIViewController+XZhAlertController.m */; };
+		7ECDDE5922C901EA007951D3 /* XZhAlertSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE5822C901EA007951D3 /* XZhAlertSheet.m */; };
+		7ECDDE5C22CA55F2007951D3 /* XZhDefaultLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE5B22CA55F2007951D3 /* XZhDefaultLayout.m */; };
+		7ECDDE6822CE57CD007951D3 /* XZhFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE6722CE57CD007951D3 /* XZhFiles.m */; };
+		7ECDDE6A22D3B689007951D3 /* jpg_images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7ECDDE6922D3B689007951D3 /* jpg_images.bundle */; };
+		7ECDDE6B22D3B698007951D3 /* jpg_images.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7ECDDE6922D3B689007951D3 /* jpg_images.bundle */; };
+		7ECDDE6D22D3B6C6007951D3 /* FilesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE6C22D3B6C6007951D3 /* FilesTest.m */; };
+		7ECDDE6F22D3B6E0007951D3 /* DataExtensionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE6E22D3B6E0007951D3 /* DataExtensionTest.m */; };
+		7ECDDE7122D3B6EE007951D3 /* StringExtensionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE7022D3B6EE007951D3 /* StringExtensionTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E16D971231C47050001957F /* XZhAudioRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZhAudioRecord.h; sourceTree = "<group>"; };
+		7E16D972231C47050001957F /* XZhAudioRecord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZhAudioRecord.m; sourceTree = "<group>"; };
+		7E16D974231C488B0001957F /* XZhAudioPlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZhAudioPlay.h; sourceTree = "<group>"; };
+		7E16D975231C488B0001957F /* XZhAudioPlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZhAudioPlay.m; sourceTree = "<group>"; };
+		7E16D97723216F6A0001957F /* XZhAudioConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZhAudioConfig.h; sourceTree = "<group>"; };
+		7E16D97823216F6A0001957F /* XZhAudioConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZhAudioConfig.m; sourceTree = "<group>"; };
 		7ECDDDE5229D9646007951D3 /* XinzZengWheels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XinzZengWheels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECDDDE8229D9646007951D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7ECDDDE9229D9646007951D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -51,6 +70,20 @@
 		7ECDDE19229D9C2B007951D3 /* NSData+XZhData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+XZhData.m"; sourceTree = "<group>"; };
 		7ECDDE1B229DA0D2007951D3 /* NSString+XZhString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+XZhString.h"; sourceTree = "<group>"; };
 		7ECDDE1C229DA0D2007951D3 /* NSString+XZhString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+XZhString.m"; sourceTree = "<group>"; };
+		7ECDDE5022C8FA3B007951D3 /* UIView+XZhEdge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+XZhEdge.h"; sourceTree = "<group>"; };
+		7ECDDE5122C8FA3B007951D3 /* UIView+XZhEdge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+XZhEdge.m"; sourceTree = "<group>"; };
+		7ECDDE5422C8FEA3007951D3 /* UIViewController+XZhAlertController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XZhAlertController.h"; sourceTree = "<group>"; };
+		7ECDDE5522C8FEA3007951D3 /* UIViewController+XZhAlertController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XZhAlertController.m"; sourceTree = "<group>"; };
+		7ECDDE5722C901EA007951D3 /* XZhAlertSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZhAlertSheet.h; sourceTree = "<group>"; };
+		7ECDDE5822C901EA007951D3 /* XZhAlertSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZhAlertSheet.m; sourceTree = "<group>"; };
+		7ECDDE5A22CA55F2007951D3 /* XZhDefaultLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZhDefaultLayout.h; sourceTree = "<group>"; };
+		7ECDDE5B22CA55F2007951D3 /* XZhDefaultLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZhDefaultLayout.m; sourceTree = "<group>"; };
+		7ECDDE6622CE57CD007951D3 /* XZhFiles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZhFiles.h; sourceTree = "<group>"; };
+		7ECDDE6722CE57CD007951D3 /* XZhFiles.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZhFiles.m; sourceTree = "<group>"; };
+		7ECDDE6922D3B689007951D3 /* jpg_images.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = jpg_images.bundle; sourceTree = "<group>"; };
+		7ECDDE6C22D3B6C6007951D3 /* FilesTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilesTest.m; sourceTree = "<group>"; };
+		7ECDDE6E22D3B6E0007951D3 /* DataExtensionTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataExtensionTest.m; sourceTree = "<group>"; };
+		7ECDDE7022D3B6EE007951D3 /* StringExtensionTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringExtensionTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +104,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E16D970231C46B80001957F /* AudioQueue */ = {
+			isa = PBXGroup;
+			children = (
+				7E16D971231C47050001957F /* XZhAudioRecord.h */,
+				7E16D972231C47050001957F /* XZhAudioRecord.m */,
+				7E16D974231C488B0001957F /* XZhAudioPlay.h */,
+				7E16D975231C488B0001957F /* XZhAudioPlay.m */,
+				7E16D97723216F6A0001957F /* XZhAudioConfig.h */,
+				7E16D97823216F6A0001957F /* XZhAudioConfig.m */,
+			);
+			path = AudioQueue;
+			sourceTree = "<group>";
+		};
 		7ECDDDDC229D9646007951D3 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +138,7 @@
 		7ECDDDE7229D9646007951D3 /* XinzZengWheels */ = {
 			isa = PBXGroup;
 			children = (
+				7ECDDE6422CE5787007951D3 /* Tools */,
 				7ECDDE15229D9BB3007951D3 /* XZhExtensions */,
 				7ECDDE0E229D9AC4007951D3 /* AES */,
 				7ECDDDE8229D9646007951D3 /* AppDelegate.h */,
@@ -111,8 +158,12 @@
 		7ECDDE00229D9648007951D3 /* XinzZengWheelsTests */ = {
 			isa = PBXGroup;
 			children = (
+				7ECDDE6922D3B689007951D3 /* jpg_images.bundle */,
 				7ECDDE01229D9648007951D3 /* XinzZengWheelsTests.m */,
 				7ECDDE03229D9648007951D3 /* Info.plist */,
+				7ECDDE6C22D3B6C6007951D3 /* FilesTest.m */,
+				7ECDDE6E22D3B6E0007951D3 /* DataExtensionTest.m */,
+				7ECDDE7022D3B6EE007951D3 /* StringExtensionTest.m */,
 			);
 			path = XinzZengWheelsTests;
 			sourceTree = "<group>";
@@ -129,6 +180,8 @@
 		7ECDDE15229D9BB3007951D3 /* XZhExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				7ECDDE4F22C8FA03007951D3 /* XZhView */,
+				7ECDDE4E22C8F981007951D3 /* XZhController */,
 				7ECDDE16229D9BEC007951D3 /* XZhData */,
 				7ECDDE17229D9BEC007951D3 /* XZhNSString */,
 			);
@@ -151,6 +204,54 @@
 				7ECDDE1C229DA0D2007951D3 /* NSString+XZhString.m */,
 			);
 			path = XZhNSString;
+			sourceTree = "<group>";
+		};
+		7ECDDE4E22C8F981007951D3 /* XZhController */ = {
+			isa = PBXGroup;
+			children = (
+				7ECDDE5322C8FB61007951D3 /* Alert */,
+			);
+			path = XZhController;
+			sourceTree = "<group>";
+		};
+		7ECDDE4F22C8FA03007951D3 /* XZhView */ = {
+			isa = PBXGroup;
+			children = (
+				7ECDDE5022C8FA3B007951D3 /* UIView+XZhEdge.h */,
+				7ECDDE5122C8FA3B007951D3 /* UIView+XZhEdge.m */,
+			);
+			path = XZhView;
+			sourceTree = "<group>";
+		};
+		7ECDDE5322C8FB61007951D3 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				7ECDDE5422C8FEA3007951D3 /* UIViewController+XZhAlertController.h */,
+				7ECDDE5522C8FEA3007951D3 /* UIViewController+XZhAlertController.m */,
+				7ECDDE5722C901EA007951D3 /* XZhAlertSheet.h */,
+				7ECDDE5822C901EA007951D3 /* XZhAlertSheet.m */,
+				7ECDDE5A22CA55F2007951D3 /* XZhDefaultLayout.h */,
+				7ECDDE5B22CA55F2007951D3 /* XZhDefaultLayout.m */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		7ECDDE6422CE5787007951D3 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				7E16D970231C46B80001957F /* AudioQueue */,
+				7ECDDE6522CE5799007951D3 /* Files */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		7ECDDE6522CE5799007951D3 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				7ECDDE6622CE57CD007951D3 /* XZhFiles.h */,
+				7ECDDE6722CE57CD007951D3 /* XZhFiles.m */,
+			);
+			path = Files;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +338,7 @@
 				7ECDDDF2229D9648007951D3 /* Assets.xcassets in Resources */,
 				7ECDDDF0229D9646007951D3 /* Main.storyboard in Resources */,
 				7ECDDE0D229D9A64007951D3 /* readme.md in Resources */,
+				7ECDDE6A22D3B689007951D3 /* jpg_images.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECDDE6B22D3B698007951D3 /* jpg_images.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,11 +357,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECDDE6822CE57CD007951D3 /* XZhFiles.m in Sources */,
+				7ECDDE5222C8FA3B007951D3 /* UIView+XZhEdge.m in Sources */,
+				7E16D973231C47050001957F /* XZhAudioRecord.m in Sources */,
+				7ECDDE5922C901EA007951D3 /* XZhAlertSheet.m in Sources */,
 				7ECDDE1A229D9C2B007951D3 /* NSData+XZhData.m in Sources */,
 				7ECDDDED229D9646007951D3 /* ViewController.m in Sources */,
 				7ECDDDF8229D9648007951D3 /* main.m in Sources */,
+				7E16D97923216F6A0001957F /* XZhAudioConfig.m in Sources */,
 				7ECDDDEA229D9646007951D3 /* AppDelegate.m in Sources */,
+				7E16D976231C488B0001957F /* XZhAudioPlay.m in Sources */,
 				7ECDDE14229D9B52007951D3 /* XZhAES.m in Sources */,
+				7ECDDE5622C8FEA3007951D3 /* UIViewController+XZhAlertController.m in Sources */,
+				7ECDDE5C22CA55F2007951D3 /* XZhDefaultLayout.m in Sources */,
 				7ECDDE1D229DA0D2007951D3 /* NSString+XZhString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,7 +378,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECDDE7122D3B6EE007951D3 /* StringExtensionTest.m in Sources */,
 				7ECDDE02229D9648007951D3 /* XinzZengWheelsTests.m in Sources */,
+				7ECDDE6D22D3B6C6007951D3 /* FilesTest.m in Sources */,
+				7ECDDE6F22D3B6E0007951D3 /* DataExtensionTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,14 +531,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T9F9D4N985;
 				INFOPLIST_FILE = XinzZengWheels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "copyRight-zengqinglong.XinzZengWheels";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.forDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -433,14 +550,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T9F9D4N985;
 				INFOPLIST_FILE = XinzZengWheels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "copyRight-zengqinglong.XinzZengWheels";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.forDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
