@@ -10,6 +10,12 @@
 		7E16D973231C47050001957F /* XZhAudioRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E16D972231C47050001957F /* XZhAudioRecord.m */; };
 		7E16D976231C488B0001957F /* XZhAudioPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E16D975231C488B0001957F /* XZhAudioPlay.m */; };
 		7E16D97923216F6A0001957F /* XZhAudioConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E16D97823216F6A0001957F /* XZhAudioConfig.m */; };
+		7E2DDF7C23A664AB00752CFB /* opus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E31ED6023A6637A003B98CC /* opus.framework */; };
+		7E2DDF7D23A664AB00752CFB /* opus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7E31ED6023A6637A003B98CC /* opus.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7E31ED6123A6637A003B98CC /* TSOpusManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E31ED5E23A6637A003B98CC /* TSOpusManager.m */; };
+		7E364B3223A6928B00D80990 /* NewOpusMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E364B3123A6928B00D80990 /* NewOpusMgr.m */; };
+		7E5E6EB4243F64C200547D96 /* XZhShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E5E6EB3243F64C200547D96 /* XZhShapeView.m */; };
+		7E5E6EB6243F69BA00547D96 /* flower.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7E5E6EB5243F69BA00547D96 /* flower.jpg */; };
 		7ECDDDEA229D9646007951D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDDE9229D9646007951D3 /* AppDelegate.m */; };
 		7ECDDDED229D9646007951D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDDEC229D9646007951D3 /* ViewController.m */; };
 		7ECDDDF0229D9646007951D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECDDDEE229D9646007951D3 /* Main.storyboard */; };
@@ -31,6 +37,13 @@
 		7ECDDE6D22D3B6C6007951D3 /* FilesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE6C22D3B6C6007951D3 /* FilesTest.m */; };
 		7ECDDE6F22D3B6E0007951D3 /* DataExtensionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE6E22D3B6E0007951D3 /* DataExtensionTest.m */; };
 		7ECDDE7122D3B6EE007951D3 /* StringExtensionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ECDDE7022D3B6EE007951D3 /* StringExtensionTest.m */; };
+		7EEFBD6223CF02C700530D18 /* libopus.c in Sources */ = {isa = PBXBuildFile; fileRef = 7EEFBD6023CF02C700530D18 /* libopus.c */; };
+		7EEFBD6923CF030D00530D18 /* framing.c in Sources */ = {isa = PBXBuildFile; fileRef = 7EEFBD6423CF030C00530D18 /* framing.c */; };
+		7EEFBD6A23CF030D00530D18 /* bitwise.c in Sources */ = {isa = PBXBuildFile; fileRef = 7EEFBD6823CF030C00530D18 /* bitwise.c */; };
+		7EEFBD6E23CF03C700530D18 /* opus_general_header.c in Sources */ = {isa = PBXBuildFile; fileRef = 7EEFBD6C23CF03C700530D18 /* opus_general_header.c */; };
+		7EEFBD7023CF046400530D18 /* 01.pcm in Resources */ = {isa = PBXBuildFile; fileRef = 7EEFBD6F23CF046400530D18 /* 01.pcm */; };
+		7EEFBD7423CF054500530D18 /* temp.pcm in Resources */ = {isa = PBXBuildFile; fileRef = 7EEFBD7323CF054400530D18 /* temp.pcm */; };
+		7EEFBD7723CF05C400530D18 /* NewOpuslib.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EEFBD7623CF05C400530D18 /* NewOpuslib.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +56,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7E2DDF7E23A664AB00752CFB /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7E2DDF7D23A664AB00752CFB /* opus.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7E16D971231C47050001957F /* XZhAudioRecord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZhAudioRecord.h; sourceTree = "<group>"; };
 		7E16D972231C47050001957F /* XZhAudioRecord.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZhAudioRecord.m; sourceTree = "<group>"; };
@@ -50,6 +77,14 @@
 		7E16D975231C488B0001957F /* XZhAudioPlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZhAudioPlay.m; sourceTree = "<group>"; };
 		7E16D97723216F6A0001957F /* XZhAudioConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZhAudioConfig.h; sourceTree = "<group>"; };
 		7E16D97823216F6A0001957F /* XZhAudioConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZhAudioConfig.m; sourceTree = "<group>"; };
+		7E31ED5E23A6637A003B98CC /* TSOpusManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSOpusManager.m; sourceTree = "<group>"; };
+		7E31ED5F23A6637A003B98CC /* TSOpusManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSOpusManager.h; sourceTree = "<group>"; };
+		7E31ED6023A6637A003B98CC /* opus.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opus.framework; sourceTree = "<group>"; };
+		7E364B3023A6928B00D80990 /* NewOpusMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewOpusMgr.h; sourceTree = "<group>"; };
+		7E364B3123A6928B00D80990 /* NewOpusMgr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewOpusMgr.m; sourceTree = "<group>"; };
+		7E5E6EB2243F64C200547D96 /* XZhShapeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XZhShapeView.h; sourceTree = "<group>"; };
+		7E5E6EB3243F64C200547D96 /* XZhShapeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XZhShapeView.m; sourceTree = "<group>"; };
+		7E5E6EB5243F69BA00547D96 /* flower.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flower.jpg; sourceTree = "<group>"; };
 		7ECDDDE5229D9646007951D3 /* XinzZengWheels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XinzZengWheels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECDDDE8229D9646007951D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7ECDDDE9229D9646007951D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -84,6 +119,19 @@
 		7ECDDE6C22D3B6C6007951D3 /* FilesTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilesTest.m; sourceTree = "<group>"; };
 		7ECDDE6E22D3B6E0007951D3 /* DataExtensionTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataExtensionTest.m; sourceTree = "<group>"; };
 		7ECDDE7022D3B6EE007951D3 /* StringExtensionTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StringExtensionTest.m; sourceTree = "<group>"; };
+		7EEFBD6023CF02C700530D18 /* libopus.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libopus.c; sourceTree = "<group>"; };
+		7EEFBD6123CF02C700530D18 /* libopus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libopus.h; sourceTree = "<group>"; };
+		7EEFBD6423CF030C00530D18 /* framing.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = framing.c; sourceTree = "<group>"; };
+		7EEFBD6623CF030C00530D18 /* ogg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ogg.h; sourceTree = "<group>"; };
+		7EEFBD6723CF030C00530D18 /* os_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = os_types.h; sourceTree = "<group>"; };
+		7EEFBD6823CF030C00530D18 /* bitwise.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitwise.c; sourceTree = "<group>"; };
+		7EEFBD6B23CF031E00530D18 /* opus_arch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = opus_arch.h; sourceTree = "<group>"; };
+		7EEFBD6C23CF03C700530D18 /* opus_general_header.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = opus_general_header.c; sourceTree = "<group>"; };
+		7EEFBD6D23CF03C700530D18 /* opus_general_header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opus_general_header.h; sourceTree = "<group>"; };
+		7EEFBD6F23CF046400530D18 /* 01.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = 01.pcm; sourceTree = "<group>"; };
+		7EEFBD7323CF054400530D18 /* temp.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = temp.pcm; sourceTree = "<group>"; };
+		7EEFBD7523CF05C400530D18 /* NewOpuslib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewOpuslib.h; sourceTree = "<group>"; };
+		7EEFBD7623CF05C400530D18 /* NewOpuslib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewOpuslib.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E2DDF7C23A664AB00752CFB /* opus.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +164,28 @@
 				7E16D97823216F6A0001957F /* XZhAudioConfig.m */,
 			);
 			path = AudioQueue;
+			sourceTree = "<group>";
+		};
+		7E31ED5D23A66360003B98CC /* Opus */ = {
+			isa = PBXGroup;
+			children = (
+				7EEFBD6323CF030C00530D18 /* ogg */,
+				7EEFBD6023CF02C700530D18 /* libopus.c */,
+				7EEFBD6123CF02C700530D18 /* libopus.h */,
+				7EEFBD6B23CF031E00530D18 /* opus_arch.h */,
+				7EEFBD6C23CF03C700530D18 /* opus_general_header.c */,
+				7EEFBD6D23CF03C700530D18 /* opus_general_header.h */,
+				7EEFBD7323CF054400530D18 /* temp.pcm */,
+				7EEFBD6F23CF046400530D18 /* 01.pcm */,
+				7E31ED6023A6637A003B98CC /* opus.framework */,
+				7E31ED5F23A6637A003B98CC /* TSOpusManager.h */,
+				7E31ED5E23A6637A003B98CC /* TSOpusManager.m */,
+				7EEFBD7523CF05C400530D18 /* NewOpuslib.h */,
+				7EEFBD7623CF05C400530D18 /* NewOpuslib.m */,
+				7E364B3023A6928B00D80990 /* NewOpusMgr.h */,
+				7E364B3123A6928B00D80990 /* NewOpusMgr.m */,
+			);
+			path = Opus;
 			sourceTree = "<group>";
 		};
 		7ECDDDDC229D9646007951D3 = {
@@ -219,6 +290,9 @@
 			children = (
 				7ECDDE5022C8FA3B007951D3 /* UIView+XZhEdge.h */,
 				7ECDDE5122C8FA3B007951D3 /* UIView+XZhEdge.m */,
+				7E5E6EB2243F64C200547D96 /* XZhShapeView.h */,
+				7E5E6EB3243F64C200547D96 /* XZhShapeView.m */,
+				7E5E6EB5243F69BA00547D96 /* flower.jpg */,
 			);
 			path = XZhView;
 			sourceTree = "<group>";
@@ -239,6 +313,7 @@
 		7ECDDE6422CE5787007951D3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				7E31ED5D23A66360003B98CC /* Opus */,
 				7E16D970231C46B80001957F /* AudioQueue */,
 				7ECDDE6522CE5799007951D3 /* Files */,
 			);
@@ -254,6 +329,25 @@
 			path = Files;
 			sourceTree = "<group>";
 		};
+		7EEFBD6323CF030C00530D18 /* ogg */ = {
+			isa = PBXGroup;
+			children = (
+				7EEFBD6423CF030C00530D18 /* framing.c */,
+				7EEFBD6523CF030C00530D18 /* include */,
+				7EEFBD6823CF030C00530D18 /* bitwise.c */,
+			);
+			path = ogg;
+			sourceTree = "<group>";
+		};
+		7EEFBD6523CF030C00530D18 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				7EEFBD6623CF030C00530D18 /* ogg.h */,
+				7EEFBD6723CF030C00530D18 /* os_types.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,6 +358,7 @@
 				7ECDDDE1229D9646007951D3 /* Sources */,
 				7ECDDDE2229D9646007951D3 /* Frameworks */,
 				7ECDDDE3229D9646007951D3 /* Resources */,
+				7E2DDF7E23A664AB00752CFB /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -335,10 +430,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ECDDDF5229D9648007951D3 /* LaunchScreen.storyboard in Resources */,
+				7EEFBD7023CF046400530D18 /* 01.pcm in Resources */,
+				7E5E6EB6243F69BA00547D96 /* flower.jpg in Resources */,
 				7ECDDDF2229D9648007951D3 /* Assets.xcassets in Resources */,
 				7ECDDDF0229D9646007951D3 /* Main.storyboard in Resources */,
 				7ECDDE0D229D9A64007951D3 /* readme.md in Resources */,
 				7ECDDE6A22D3B689007951D3 /* jpg_images.bundle in Resources */,
+				7EEFBD7423CF054500530D18 /* temp.pcm in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,17 +457,25 @@
 			files = (
 				7ECDDE6822CE57CD007951D3 /* XZhFiles.m in Sources */,
 				7ECDDE5222C8FA3B007951D3 /* UIView+XZhEdge.m in Sources */,
+				7E31ED6123A6637A003B98CC /* TSOpusManager.m in Sources */,
 				7E16D973231C47050001957F /* XZhAudioRecord.m in Sources */,
 				7ECDDE5922C901EA007951D3 /* XZhAlertSheet.m in Sources */,
+				7E5E6EB4243F64C200547D96 /* XZhShapeView.m in Sources */,
 				7ECDDE1A229D9C2B007951D3 /* NSData+XZhData.m in Sources */,
 				7ECDDDED229D9646007951D3 /* ViewController.m in Sources */,
 				7ECDDDF8229D9648007951D3 /* main.m in Sources */,
 				7E16D97923216F6A0001957F /* XZhAudioConfig.m in Sources */,
+				7EEFBD7723CF05C400530D18 /* NewOpuslib.m in Sources */,
+				7EEFBD6223CF02C700530D18 /* libopus.c in Sources */,
 				7ECDDDEA229D9646007951D3 /* AppDelegate.m in Sources */,
 				7E16D976231C488B0001957F /* XZhAudioPlay.m in Sources */,
 				7ECDDE14229D9B52007951D3 /* XZhAES.m in Sources */,
+				7EEFBD6A23CF030D00530D18 /* bitwise.c in Sources */,
 				7ECDDE5622C8FEA3007951D3 /* UIViewController+XZhAlertController.m in Sources */,
+				7EEFBD6923CF030D00530D18 /* framing.c in Sources */,
 				7ECDDE5C22CA55F2007951D3 /* XZhDefaultLayout.m in Sources */,
+				7E364B3223A6928B00D80990 /* NewOpusMgr.m in Sources */,
+				7EEFBD6E23CF03C700530D18 /* opus_general_header.c in Sources */,
 				7ECDDE1D229DA0D2007951D3 /* NSString+XZhString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,7 +572,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -519,7 +625,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -534,12 +640,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T9F9D4N985;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XinzZengWheels/Tools/Opus",
+				);
 				INFOPLIST_FILE = XinzZengWheels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.forDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "copyRight-zengqingloon.BDBodyAnalysis";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -553,12 +663,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T9F9D4N985;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XinzZengWheels/Tools/Opus",
+				);
 				INFOPLIST_FILE = XinzZengWheels/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.test.forDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = "copyRight-zengqingloon.BDBodyAnalysis";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

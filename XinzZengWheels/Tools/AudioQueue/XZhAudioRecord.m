@@ -137,7 +137,7 @@ void pBufferHandler(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef in
 
 - (void)processAudioBuffer:(AudioQueueBufferRef )audioQueueBufferRef withQueue:(AudioQueueRef )audioQueueRef {
     NSData *data = [NSMutableData dataWithBytes:audioQueueBufferRef->mAudioData length:audioQueueBufferRef->mAudioDataByteSize];
-    NSLog(@"recording status: %u, data length: %ld", _recording, data.length);
+//    NSLog(@"recording status: %u, data length: %ld", _recording, data.length);
     // 处理长度小于bufferByteSize的情况. (补0 或者 缓存数据等待填充)
 //    if (mData.length < bufferByteSize) {
 //        Byte byte[] = {0x00};

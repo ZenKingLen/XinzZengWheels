@@ -12,6 +12,10 @@
 #import "XZhExtensions/XZhView/UIView+XZhEdge.h"
 #import "Tools/AudioQueue/XZhAudioRecord.h"
 #import "XZhFiles.h"
+#import "TSOpusManager.h"
+#import "NewOpusMgr.h"
+#import "NewOpuslib.h"
+#import "XZhShapeView.h"
 
 @interface ViewController () <XZhRecordDelegate>
 
@@ -27,17 +31,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"test" style:UIBarButtonItemStylePlain target:self action:@selector(testDatas)];
+    self.view.backgroundColor = [UIColor lightGrayColor];
     
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"test" style:UIBarButtonItemStylePlain target:self action:@selector(testDatas)];
 //    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://show.lianj.com/index/project/scene_view/mobile/1/id/5"]];
 //    [self.wkwebview loadRequest:request];
-    [XZhAudioRecord share].isMainThread = NO;
-    [XZhAudioRecord share].delegate = self;
+//    [XZhAudioRecord share].isMainThread = NO;
+//    [XZhAudioRecord share].delegate = self;
 }
 
 - (void)testDatas {
+
+    [self testQLImageView];
     
-    [self testRecord];
+//    [self testNewOpus];
+//    [self testPcm2Opus];
+//    [self testRecord];
     
 //    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingString:@"/Images"];
 //    NSLog(@"path = %@", path);
@@ -56,6 +65,40 @@
     
 //    NSLog(@"x = %lf, y = %lf, width = %lf, height = %lf", self.view.x, self.view.y, self.view.width, self.view.height);
 //    NSLog(@"size = %@, orgin = %@", NSStringFromCGSize(self.view.size), NSStringFromCGPoint(self.view.origin));
+}
+
+- (void)testQLImageView {
+    XZhShapeView *shape = [[XZhShapeView alloc] initWithFrame:self.view.frame];
+    [self.view addSubview:shape];
+}
+
+- (void)testNewOpus {
+    NewOpuslib *olib = [[NewOpuslib alloc] init];
+    NSData *data;
+    data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"temp.pcm" ofType:nil]];
+    [olib encodeWithPCM:data];
+}
+
+- (void)testPcm2Opus {
+    NSString *pcmPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject stringByAppendingString:@"/temp.pcm"];
+    NSString *opusPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject stringByAppendingString:@"/temp.opus"];
+    NSData *pcmData = [NSData dataWithContentsOfFile:pcmPath];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:opusPath]) {
+        [[NSFileManager defaultManager] removeItemAtPath:opusPath error:nil];
+    }
+    
+    NSData *opusData;
+//    TSOpusManager *opus = [[TSOpusManager alloc] init];
+//    opusData = [opus encodePCM:pcmData];
+    opusData = [[NewOpusMgr shared] encode:pcmData];
+    
+    BOOL flag = [opusData writeToFile:opusPath atomically:YES];
+    NSLog(@"pcmPath: %@\n, opusPath: %@", pcmPath, opusPath);
+    if (flag) {
+        NSLog(@"ok 了");
+        return;
+    }
+    NSLog(@"失败了");
 }
 
 - (void)testRecord {
@@ -77,10 +120,12 @@
     if ([[NSFileManager defaultManager] fileExistsAtPath:docwav]) {
         [[NSFileManager defaultManager] removeItemAtPath:docwav error:nil];
     }
+    NSLog(@"pcm: %@\n, wav: %@", docpcm, docwav);
 }
 - (void)xzhRecordStop {
     NSString *docpcm = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject stringByAppendingString:@"/temp.pcm"];
     NSString *docwav = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject stringByAppendingString:@"/temp.wav"];
+    NSLog(@"save path = %@", docpcm);
     [[XZhAudioRecord share] convertPCMFile:docpcm toWavFile:docwav];
 }
 - (void)xzhRecordError:(NSError *)error {
